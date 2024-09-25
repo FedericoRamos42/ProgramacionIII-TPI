@@ -12,9 +12,6 @@ namespace Domain.Entities
 {
     public class Doctor : User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdDoctor { get; set; }
         [Required]
         public Speciality Speciality { get; set; }
         public int LicenseNumber { get; set; }

@@ -10,11 +10,6 @@ namespace Domain.Entities
 {
     public class Patient : User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdPatient { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public Adress? Adress { get; set; }
         [MaxLength(50)]
         public string MedicalInsurance { get; set; } = string.Empty;
         public bool IsAvailable { get; set; }

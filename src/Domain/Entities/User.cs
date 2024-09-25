@@ -19,6 +19,9 @@ namespace Domain.Entities
         [MaxLength(50)]
         public string LastName { get; set; } = string.Empty;
         public string PhoneNumber {  get; set; } = string.Empty;
+        public DateTime DateOfBirth { get; set; }
+        public Adress? Adress { get; set; }
+        public int AdressId { get; set; }
         [Required]
         [MaxLength(100)]
         [EmailAddress]
