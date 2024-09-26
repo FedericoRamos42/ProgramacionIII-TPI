@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|solutionrelative:web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\migrations\\20240925223901_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -87,20 +87,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Web\\appsettings.json",
               "RelativeDocumentMoniker": "Web\\appsettings.json",
               "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Web\\appsettings.json",
               "RelativeToolTip": "Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-09-25T21:27:09.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Web\\Program.cs",
               "RelativeDocumentMoniker": "Web\\Program.cs",

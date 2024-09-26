@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\appoitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appoitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\appoitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appoitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8BAE00A3-35FF-4869-AED7-E7647C73A7B0}|Web\\Web.csproj|solutionrelative:web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\migrations\\20240925223901_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240925223901_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\appoitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appoitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\adress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\enums\\appoitmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\appoitmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\infrastructure\\data\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6138BA6F-86C2-4BCD-ABA8-C352173099BF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE930780-7909-46A5-86DB-699F3DA361CB}|Domain\\Domain.csproj|c:\\users\\federico\\desktop\\programacioniii\\programacioniii-tpi\\src\\domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,8 +81,38 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "AppoitmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\AppoitmentRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppoitmentRepository.cs",
+              "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\AppoitmentRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\AppoitmentRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwD0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T14:26:10.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\DoctorRepository.cs",
+              "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\DoctorRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\DoctorRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwC0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T13:36:16.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "20240925223901_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Migrations\\20240925223901_InitialMigration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240925223901_InitialMigration.cs",
@@ -82,12 +120,11 @@
               "RelativeToolTip": "Infrastructure\\Migrations\\20240925223901_InitialMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T22:39:01.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T22:39:01.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Web\\appsettings.json",
               "RelativeDocumentMoniker": "Web\\appsettings.json",
@@ -100,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Web\\Program.cs",
               "RelativeDocumentMoniker": "Web\\Program.cs",
@@ -108,29 +145,24 @@
               "RelativeToolTip": "Web\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T21:22:02.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2024-09-25T21:22:02.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\BaseRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\BaseRepository.cs",
               "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\BaseRepository.cs",
               "RelativeToolTip": "Infrastructure\\Data\\BaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T20:21:27.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ApplicationContext.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Infrastructure\\Data\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationContext.cs",
@@ -143,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AppoitmentStatus.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Enums\\AppoitmentStatus.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\AppoitmentStatus.cs",
@@ -151,12 +183,11 @@
               "RelativeToolTip": "Domain\\Enums\\AppoitmentStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:38:46.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T19:38:46.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Speciality.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Enums\\Speciality.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\Speciality.cs",
@@ -164,12 +195,11 @@
               "RelativeToolTip": "Domain\\Enums\\Speciality.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:10:03.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T19:10:03.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\UserRole.cs",
@@ -177,12 +207,11 @@
               "RelativeToolTip": "Domain\\Enums\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:58:39.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:58:39.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Admin.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Admin.cs",
@@ -190,12 +219,11 @@
               "RelativeToolTip": "Domain\\Entities\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:50:59.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:50:59.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Adress.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Adress.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Adress.cs",
@@ -203,25 +231,24 @@
               "RelativeToolTip": "Domain\\Entities\\Adress.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:50:43.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:50:43.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Appoitment.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Appoitment.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Appoitment.cs",
               "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Appoitment.cs",
               "RelativeToolTip": "Domain\\Entities\\Appoitment.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T18:50:17.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Patient.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Patient.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Patient.cs",
@@ -229,12 +256,11 @@
               "RelativeToolTip": "Domain\\Entities\\Patient.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:49:32.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:49:32.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\Doctor.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Doctor.cs",
@@ -242,25 +268,24 @@
               "RelativeToolTip": "Domain\\Entities\\Doctor.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:49:18.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:49:18.418Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
               "ToolTip": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Domain\\Entities\\User.cs",
               "RelativeToolTip": "Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T18:49:04.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Federico\\Desktop\\ProgramacionIII\\ProgramacionIII-TPI\\src\\Application\\Class1.cs",
               "RelativeDocumentMoniker": "Application\\Class1.cs",
@@ -268,8 +293,7 @@
               "RelativeToolTip": "Application\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:47:32.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:47:32.292Z"
             }
           ]
         }
