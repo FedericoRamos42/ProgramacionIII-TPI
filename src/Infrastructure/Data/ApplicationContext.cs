@@ -5,24 +5,25 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
-    public class ApplicationContext: DbContext
+    public class ApplicationContext : DbContext
     {
         private readonly bool isTestingEnviroment;
-        
-        public ApplicationContext(DbContextOptions<ApplicationContext>options,bool isTestingEnviroment=false) : base(options)
+
+        public ApplicationContext(DbContextOptions<ApplicationContext> options, bool isTestingEnviroment = false) : base(options)
         {
             this.isTestingEnviroment = isTestingEnviroment;
         }
 
         public DbSet<Doctor> Doctors { get; set; }
-        public DbSet<Patient> Patients { get; set;}
+        public DbSet<Patient> Patients { get; set; }
         public DbSet<Appoitment> Appoitments { get; set; }
-        public DbSet<Adress> Adress { get;set; }
+        public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,30 +48,30 @@ namespace Infrastructure.Data
 
             var appointmetStatusConverter = new EnumToStringConverter<AppoitmentStatus>();
             modelBuilder.Entity<Appoitment>()
-                .Property(e=>e.Status)
+                .Property(e => e.Status)
                 .HasConversion(appointmetStatusConverter);
 
             var doctorSpeciality = new EnumToStringConverter<Speciality>();
             modelBuilder.Entity<Doctor>()
-                .Property(e=>e.Speciality)
+                .Property(e => e.Speciality)
                 .HasConversion(doctorSpeciality);
 
             modelBuilder.Entity<Doctor>()
-                .HasMany(d => d.AssignedAppointment)
-                .WithOne(t => t.Doctor)
-                .HasForeignKey(t => t.DoctorId);
+               .HasMany(d => d.AssignedAppointment)
+               .WithOne(a => a.Doctor)
+               .HasForeignKey(a => a.DoctorId);
 
+            
             modelBuilder.Entity<Patient>()
-                .HasMany(d => d.Appoitments)
-                .WithOne(t => t.Patient)
-                .HasForeignKey(t => t.PatientId);
+                .HasMany(p => p.Appoitments)
+                .WithOne(a => a.Patient)
+                .HasForeignKey(a => a.PatientId);
 
             modelBuilder.Entity<User>()
-                .HasOne(d => d.Adress)
-                .WithMany()
-                .HasForeignKey(d=>d.AdressId);
+                .HasOne(u => u.Address)   
+                .WithOne(a => a.User)     
+                .HasForeignKey<Address>(a => a.UserId); 
 
         }
-
     }
 }

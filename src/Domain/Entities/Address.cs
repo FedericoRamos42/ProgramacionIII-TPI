@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Adress
+    public class Address
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,5 +17,7 @@ namespace Domain.Entities
         public string Province {  get; set; } = string.Empty;
         public string City { get; set; } = string.Empty ;
         public string PostalCode { get; set; } = string.Empty;
+        public int UserId { get; set; }
+        public User? User { get; set; }
     }
 }

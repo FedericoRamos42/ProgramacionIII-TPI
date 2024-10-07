@@ -20,8 +20,6 @@ namespace Domain.Entities
         public string LastName { get; set; } = string.Empty;
         public string PhoneNumber {  get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
-        public Adress? Adress { get; set; }
-        public int AdressId { get; set; }
         [Required]
         [MaxLength(100)]
         [EmailAddress]
@@ -32,5 +30,6 @@ namespace Domain.Entities
         [Required]
         public UserRole UserRole { get; set; }
         
+        public Address? Address { get; set; }
     }
 }
