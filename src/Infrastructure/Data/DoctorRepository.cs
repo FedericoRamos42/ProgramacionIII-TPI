@@ -26,5 +26,11 @@ namespace Infrastructure.Data
                                   .ToList();
             return doctors;
         }
+        public Doctor? GetByIdIncludeAddress(int id)
+        {
+            var entity = _repository.Doctors.Include(a => a.Address)
+                                             .FirstOrDefault(c => c.Id == id);
+            return entity;
+        }
     }
 }

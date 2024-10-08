@@ -18,5 +18,10 @@ namespace Domain.Entities
         public bool IsAvailable { get; set; }
         public ICollection<Appoitment> AssignedAppointment { get; set; } = new List<Appoitment>();
 
+        public Doctor() 
+        {
+            IsAvailable = true;
+        } 
+
     }
 }

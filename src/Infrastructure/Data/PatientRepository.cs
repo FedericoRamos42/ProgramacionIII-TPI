@@ -30,16 +30,5 @@ namespace Infrastructure.Data
                                              .FirstOrDefault(c => c.Id == id);
             return entity;
         }
-
-        public Patient DeletePatient(int id)
-        {
-            var entity = _repository.Patients
-                                    .Include(a => a.Address)
-                                    .FirstOrDefault(a => a.Id == id);
-
-            var patient = _repository.Patients.Remove(entity);
-            _repository.SaveChanges();
-            return entity;
-        }
     }
 }

@@ -9,6 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IDoctorRepository : IBaseRepository<Doctor>
     {
-
+        Doctor? GetByIdIncludeAddress(int id);
     }
 }

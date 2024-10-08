@@ -85,15 +85,10 @@ namespace Application.Services
 
         public PatientDto DeletePatient(int id) 
         {
-            try
-            {
-                var entity = _repository.DeletePatient(id);
+                var entity = _repository.GetByIdIncludeAddress(id);
+                var patient = _repository.Delete(entity);
                 return PatientDto.CreatePatient(entity);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while creating the patient.", ex);
-            }
+            
         }
 
     }

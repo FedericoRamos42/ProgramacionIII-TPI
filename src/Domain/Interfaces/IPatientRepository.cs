@@ -11,6 +11,5 @@ namespace Domain.Interfaces
     {
         Patient? GetByIdIncludeAddress(int id);
         IEnumerable<Patient> GetAllPatientWithAddress();
-        Patient DeletePatient(int id);
     }
 }
