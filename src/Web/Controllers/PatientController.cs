@@ -30,7 +30,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPatient([FromBody] UpdatePatientRequest request)
+        public IActionResult AddPatient([FromBody] PatientCreateRequest request)
         {
             return Ok(_service.CreatePatient(request));
         }

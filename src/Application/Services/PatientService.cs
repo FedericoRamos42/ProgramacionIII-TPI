@@ -1,4 +1,5 @@
-﻿using Application.Models.Request;
+﻿using Application.Models;
+using Application.Models.Request;
 using Domain.Entities;
 using Domain.Interfaces;
 using System;
@@ -14,23 +15,35 @@ namespace Application.Services
     public class PatientService
     {
         private readonly IPatientRepository _repository;
+        private readonly IAddressRepository _addressRepository;
 
-        public PatientService(IPatientRepository patient)
+        public PatientService(IPatientRepository patientRepository, IAddressRepository addressRepository)
         {
-            _repository = patient;
+            _repository = patientRepository;
+            _addressRepository = addressRepository;
         }
-        public Patient? GetPatientById(int id) 
+        public PatientDto? GetPatientById(int id) 
         {
-            return _repository.GetById(id);
+            var Patient = _repository.GetByIdIncludeAddress(id);
+            return PatientDto.CreatePatient(Patient);
+
         }
 
-        public IEnumerable<Patient> GetAllPatients() 
+        public IEnumerable<PatientDto> GetAllPatients() 
         {
-            return _repository.GetAll();
+            var listPatient = _repository.GetAllPatientWithAddress();
+            return PatientDto.CreateList(listPatient);
         }
 
-        public Patient CreatePatient(UpdatePatientRequest patient) 
+        public PatientDto CreatePatient(PatientCreateRequest patient) 
         {
+            var newAdress = new Address()
+            {
+                Street = patient.Address.Street,
+                PostalCode = patient.Address.PostalCode,
+                City = patient.Address.City,
+                Province = patient.Address.Province,
+            };
 
             var entity = new Patient()
             {
@@ -39,12 +52,24 @@ namespace Application.Services
                 PhoneNumber = patient.PhoneNumber,
                 DateOfBirth = patient.DateOfBirth,
                 MedicalInsurance = patient.MedicalInsurance,
+                Address = newAdress,
+                Email = patient.Email,
+                Password = patient.Password,
             };
 
-            return _repository.Create(entity);
+            try
+            {
+                var address = _addressRepository.Create(newAdress);
+                var newEntity = _repository.Create(entity);
+                return PatientDto.CreatePatient(newEntity);
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception("An error occurred while creating the patient.", ex);
+            }
         }
 
-        public Patient UpdatePatient(int id, UpdatePatientRequest patient)
+        public PatientDto UpdatePatient(int id, UpdatePatientRequest patient)
         {
             var entity = _repository.GetById(id);
             
@@ -54,14 +79,21 @@ namespace Application.Services
             entity.DateOfBirth = patient.DateOfBirth;
             entity.MedicalInsurance = patient.MedicalInsurance;
 
-            return _repository.Update(entity);
+            var newEntity = _repository.Update(entity);
+            return PatientDto.CreatePatient(newEntity);
         }
 
-        public Patient DeletePatient(int id) 
+        public PatientDto DeletePatient(int id) 
         {
-            var entity = _repository.GetById(id);
-
-            return _repository.Delete(entity);
+            try
+            {
+                var entity = _repository.DeletePatient(id);
+                return PatientDto.CreatePatient(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while creating the patient.", ex);
+            }
         }
 
     }

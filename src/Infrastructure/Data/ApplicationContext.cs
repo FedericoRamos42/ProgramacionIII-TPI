@@ -67,10 +67,10 @@ namespace Infrastructure.Data
                 .WithOne(a => a.Patient)
                 .HasForeignKey(a => a.PatientId);
 
-            modelBuilder.Entity<User>()
-                .HasOne(u => u.Address)   
-                .WithOne(a => a.User)     
-                .HasForeignKey<Address>(a => a.UserId); 
+            modelBuilder.Entity<Address>()
+                .HasOne(u => u.User)   
+                .WithOne(a => a.Address)     
+                .HasForeignKey<User>(a => a.AddressId); 
 
         }
     }

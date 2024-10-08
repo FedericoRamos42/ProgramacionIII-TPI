@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,5 +15,11 @@ namespace Domain.Entities
         public string MedicalInsurance { get; set; } = string.Empty;
         public bool IsAvailable { get; set; }
         public ICollection<Appoitment> Appoitments { get; set;} = new List<Appoitment>();
+
+        public Patient()
+        {
+            UserRole = UserRole.Patient;
+            IsAvailable = true;
+        }
     }
 }

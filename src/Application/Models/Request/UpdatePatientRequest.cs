@@ -15,6 +15,7 @@ namespace Application.Models.Request
         public string PhoneNumber { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         public string MedicalInsurance { get; set; } = string.Empty;
+        public AddressForRequest? Address {  get; set; }
 
     }
 }

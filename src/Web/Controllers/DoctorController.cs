@@ -7,7 +7,6 @@ namespace Web.Controllers
     [ApiController]
     public class DoctorController : ControllerBase
     {
-        private readonly 
         
     }
 }
