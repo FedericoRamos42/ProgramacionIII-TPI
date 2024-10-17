@@ -131,4 +131,3 @@ C:\Users\Federico\Desktop\ProgramacionIII\ProgramacionIII-TPI\src\Web\obj\Debug\
 C:\Users\Federico\Desktop\ProgramacionIII\ProgramacionIII-TPI\src\Web\obj\Debug\net8.0\Web.pdb
 C:\Users\Federico\Desktop\ProgramacionIII\ProgramacionIII-TPI\src\Web\obj\Debug\net8.0\Web.genruntimeconfig.cache
 C:\Users\Federico\Desktop\ProgramacionIII\ProgramacionIII-TPI\src\Web\obj\Debug\net8.0\ref\Web.dll
-C:\Users\Federico\Desktop\ProgramacionIII\ProgramacionIII-TPI\src\Web\obj\Debug\net8.0\Web.MvcApplicationPartsAssemblyInfo.cs

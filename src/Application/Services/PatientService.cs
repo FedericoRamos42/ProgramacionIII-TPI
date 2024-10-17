@@ -15,17 +15,22 @@ namespace Application.Services
     public class PatientService
     {
         private readonly IPatientRepository _repository;
-        private readonly IAddressRepository _addressRepository;
 
-        public PatientService(IPatientRepository patientRepository, IAddressRepository addressRepository)
+        public PatientService(IPatientRepository patientRepository)
         {
             _repository = patientRepository;
-            _addressRepository = addressRepository;
         }
+
         public PatientDto? GetPatientById(int id) 
         {
             var Patient = _repository.GetByIdIncludeAddress(id);
-            return PatientDto.CreatePatient(Patient);
+            if (Patient != null) 
+            {
+                return PatientDto.CreatePatient(Patient);
+
+            }
+
+            throw new ArgumentException("failled");
 
         }
 
@@ -57,37 +62,50 @@ namespace Application.Services
                 Password = patient.Password,
             };
 
-            try
-            {
-                var address = _addressRepository.Create(newAdress);
                 var newEntity = _repository.Create(entity);
                 return PatientDto.CreatePatient(newEntity);
-            }
-            catch (Exception ex) 
-            {
-                throw new Exception("An error occurred while creating the patient.", ex);
-            }
+            
+            
         }
 
         public PatientDto UpdatePatient(int id, UpdatePatientRequest patient)
         {
-            var entity = _repository.GetById(id);
-            
-            entity.Name = patient.Name;
-            entity.LastName = patient.LastName;
-            entity.PhoneNumber = patient.PhoneNumber;
-            entity.DateOfBirth = patient.DateOfBirth;
-            entity.MedicalInsurance = patient.MedicalInsurance;
+            var entity = _repository.GetByIdIncludeAddress(id);
 
-            var newEntity = _repository.Update(entity);
-            return PatientDto.CreatePatient(newEntity);
+            if (entity != null)
+            {
+                entity.Name = patient.Name;
+                entity.LastName = patient.LastName;
+                entity.PhoneNumber = patient.PhoneNumber;
+                entity.DateOfBirth = patient.DateOfBirth;
+                entity.MedicalInsurance = patient.MedicalInsurance;
+
+                if (patient.Address != null ) 
+                {
+                    entity.Address.City = patient.Address.City;
+                    entity.Address.Street = patient.Address.Street;
+                    entity.Address.Province = patient.Address.Province;
+                    entity.Address.PostalCode = patient.Address.PostalCode;
+
+                }
+                var newEntity = _repository.Update(entity);
+                return PatientDto.CreatePatient(newEntity);
+            }
+
+            throw new ArgumentException("All fields are required.");
         }
 
         public PatientDto DeletePatient(int id) 
         {
-                var entity = _repository.GetByIdIncludeAddress(id);
+            
+            var entity = _repository.GetByIdIncludeAddress(id);
+
+            if (entity != null) 
+            {
                 var patient = _repository.Delete(entity);
-                return PatientDto.CreatePatient(entity);
+                return PatientDto.CreatePatient(patient);
+            }
+            throw new ArgumentException("failled");
             
         }
 

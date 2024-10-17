@@ -27,6 +27,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("PatientId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("PostalCode")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -41,7 +44,30 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PatientId")
+                        .IsUnique();
+
                     b.ToTable("Addresses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Springfield",
+                            PatientId = 1,
+                            PostalCode = "62701",
+                            Province = "IL",
+                            Street = "123 Main St"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Springfield",
+                            PatientId = 2,
+                            PostalCode = "62702",
+                            Province = "IL",
+                            Street = "456 Elm St"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Appoitment", b =>
@@ -60,7 +86,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("PatientId")
+                    b.Property<int?>("PatientId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Status")
@@ -79,13 +105,62 @@ namespace Infrastructure.Migrations
                     b.ToTable("Appoitments");
                 });
 
-            modelBuilder.Entity("Domain.Entities.User", b =>
+            modelBuilder.Entity("Domain.Entities.Speciality", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AddressId")
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Specialities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Cardiology focuses on the diagnosis and treatment of heart conditions and disorders of the cardiovascular system.",
+                            Name = "Cardiology"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Dermatology deals with the study, diagnosis, and treatment of skin, hair, and nail disorders.",
+                            Name = "Dermatology"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Pediatrics involves the medical care of infants, children, and adolescents up to the age of 18.",
+                            Name = "Pediatrics"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Orthopedics specializes in the diagnosis, correction, prevention, and treatment of skeletal deformities, including bones, joints, muscles, and ligaments.",
+                            Name = "Orthopedics"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Dentistry is the branch of medicine that involves the study, diagnosis, prevention, and treatment of diseases and conditions of the oral cavity.",
+                            Name = "Dentist"
+                        });
+                });
+
+            modelBuilder.Entity("Domain.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -95,6 +170,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -121,9 +199,6 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId")
-                        .IsUnique();
-
                     b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator<string>("UserRole");
@@ -142,31 +217,52 @@ namespace Infrastructure.Migrations
                 {
                     b.HasBaseType("Domain.Entities.User");
 
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("LicenseNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Speciality")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("SpecialityId")
+                        .HasColumnType("INTEGER");
 
-                    b.ToTable("Usuarios", null, t =>
-                        {
-                            t.Property("IsAvailable")
-                                .HasColumnName("Doctor_IsAvailable");
-                        });
+                    b.HasIndex("SpecialityId");
+
+                    b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator().HasValue("Doctor");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 3,
+                            DateOfBirth = new DateTime(1975, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "dr.sarah@example.com",
+                            IsAvailable = true,
+                            LastName = "Johnson",
+                            Name = "Dr. Sarah",
+                            Password = "password123",
+                            PhoneNumber = "1231231234",
+                            UserRole = "Doctor",
+                            LicenseNumber = 123456,
+                            SpecialityId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DateOfBirth = new DateTime(1985, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "dr.alex@example.com",
+                            IsAvailable = true,
+                            LastName = "Williams",
+                            Name = "Dr. Alex",
+                            Password = "password123",
+                            PhoneNumber = "3213214321",
+                            UserRole = "Doctor",
+                            LicenseNumber = 654321,
+                            SpecialityId = 2
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
                     b.HasBaseType("Domain.Entities.User");
-
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("MedicalInsurance")
                         .IsRequired()
@@ -176,6 +272,45 @@ namespace Infrastructure.Migrations
                     b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator().HasValue("Patient");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DateOfBirth = new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "john.doe@example.com",
+                            IsAvailable = true,
+                            LastName = "Doe",
+                            Name = "John",
+                            Password = "password123",
+                            PhoneNumber = "1234567890",
+                            UserRole = "Patient",
+                            MedicalInsurance = "HealthInsure"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DateOfBirth = new DateTime(1990, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "jane.smith@example.com",
+                            IsAvailable = true,
+                            LastName = "Smith",
+                            Name = "Jane",
+                            Password = "password123",
+                            PhoneNumber = "0987654321",
+                            UserRole = "Patient",
+                            MedicalInsurance = "HealthInsure"
+                        });
+                });
+
+            modelBuilder.Entity("Domain.Entities.Address", b =>
+                {
+                    b.HasOne("Domain.Entities.Patient", "Patient")
+                        .WithOne("Address")
+                        .HasForeignKey("Domain.Entities.Address", "PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("Domain.Entities.Appoitment", b =>
@@ -188,29 +323,27 @@ namespace Infrastructure.Migrations
 
                     b.HasOne("Domain.Entities.Patient", "Patient")
                         .WithMany("Appoitments")
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PatientId");
 
                     b.Navigation("Doctor");
 
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("Domain.Entities.User", b =>
+            modelBuilder.Entity("Domain.Entities.Doctor", b =>
                 {
-                    b.HasOne("Domain.Entities.Address", "Address")
-                        .WithOne("User")
-                        .HasForeignKey("Domain.Entities.User", "AddressId")
+                    b.HasOne("Domain.Entities.Speciality", "Speciality")
+                        .WithMany("SpecialityDoctors")
+                        .HasForeignKey("SpecialityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
+                    b.Navigation("Speciality");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Address", b =>
+            modelBuilder.Entity("Domain.Entities.Speciality", b =>
                 {
-                    b.Navigation("User");
+                    b.Navigation("SpecialityDoctors");
                 });
 
             modelBuilder.Entity("Domain.Entities.Doctor", b =>
@@ -220,6 +353,9 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
+                    b.Navigation("Address")
+                        .IsRequired();
+
                     b.Navigation("Appoitments");
                 });
 #pragma warning restore 612, 618

@@ -8,8 +8,9 @@ namespace Domain.Enums
 {
     public enum AppoitmentStatus
     {
-        Confirmed,
-        Pending,
+        Available,
+        Reserved,
         Canceled,
+        Completed
     }
 }

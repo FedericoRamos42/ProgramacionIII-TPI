@@ -9,6 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IAppoitmentRepository : IBaseRepository<Appoitment>
     {
-
+        Appoitment? GetAppoitmentByWithPatientAndDoctor(int id);
+        IEnumerable<Appoitment> GetAppoitmentByDoctorId(int doctorId);
     }
 }

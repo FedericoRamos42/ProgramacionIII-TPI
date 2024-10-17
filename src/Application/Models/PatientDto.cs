@@ -33,7 +33,7 @@ namespace Application.Models
                 Name = patient.Name,
                 LastName = patient.LastName,
                 PhoneNumber = patient.PhoneNumber,
-                DateOfBirth = DateTime.Now,
+                DateOfBirth = patient.DateOfBirth,
                 Email = patient.Email,
                 Password = patient.Password,
                 UserRole = patient.UserRole,

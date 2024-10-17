@@ -13,13 +13,12 @@ namespace Domain.Entities
     {
         [MaxLength(50)]
         public string MedicalInsurance { get; set; } = string.Empty;
-        public bool IsAvailable { get; set; }
         public ICollection<Appoitment> Appoitments { get; set;} = new List<Appoitment>();
+        public Address Address { get; set; }
 
         public Patient()
         {
             UserRole = UserRole.Patient;
-            IsAvailable = true;
         }
     }
 }

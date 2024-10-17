@@ -16,7 +16,7 @@ namespace Application.Models.Request
         public string PhoneNumber { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         [Required]
-        public Speciality Speciality { get; set; }
+        public int SpecialityId { get; set; }
         public int LicenseNumber { get; set; }
         [Required]
         [EmailAddress]

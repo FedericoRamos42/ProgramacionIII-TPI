@@ -1,4 +1,5 @@
-﻿using Application.Models;
+﻿using Application.Interfaces;
+using Application.Models;
 using Application.Models.Request;
 using Domain.Entities;
 using Domain.Interfaces;
@@ -10,20 +11,26 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class DoctorService
+    public class DoctorService : IDoctorService
     {
         private readonly IDoctorRepository _repository;
-        private readonly IAddressRepository _addressRepository;
-        public DoctorService(IDoctorRepository repository, IAddressRepository addresRepository)
+        private readonly ISpecialityRepository _speciality;
+
+        public DoctorService(IDoctorRepository repository , ISpecialityRepository speciality)
         {
             _repository = repository;
-            _addressRepository = addresRepository;
+            _speciality = speciality;
         }
 
         public DoctorDto GetById(int id)
         {
-            var doctor = _repository.GetByIdIncludeAddress(id);
+            var doctor = _repository.GetById(id);
             return DoctorDto.CreateDoctorDto(doctor);
+        }
+        public IEnumerable<DoctorDto> GetBySpeciality(int id) 
+        {
+            var listDoctor = _repository.GetDoctorsBySpeciality(id);    
+            return DoctorDto.CreatelistDto(listDoctor);
         }
 
         public IEnumerable<DoctorDto> GetAll()
@@ -31,45 +38,62 @@ namespace Application.Services
             var list = _repository.GetAll();
             return DoctorDto.CreatelistDto(list);
         }
-        public DoctorDto CreateDoctor(DoctorCreateRequest doctor)
+        public DoctorDto CreateDoctor( DoctorCreateRequest doctor)
         {
-            var newAdress = new Address()
-            {
-                Street = doctor.Address.Street,
-                PostalCode = doctor.Address.PostalCode,
-                City = doctor.Address.City,
-                Province = doctor.Address.Province,
-            };
 
+            var speciality = _speciality.GetById(doctor.SpecialityId);
+            if (speciality == null) 
+            {
+                throw new ArgumentException("ERROR");
+            }
             var entity = new Doctor()
             {
                 Name = doctor.Name,
                 LastName = doctor.LastName,
                 PhoneNumber = doctor.PhoneNumber,
                 DateOfBirth = doctor.DateOfBirth,
-                Speciality = doctor.Speciality,
                 LicenseNumber = doctor.LicenseNumber,
-                Address = newAdress,
+                SpecialityId = doctor.SpecialityId,
                 Email = doctor.Email,
                 Password = doctor.Password
             };
 
-            try
-            {
+            
                 var newEntity = _repository.Create(entity);
                 return DoctorDto.CreateDoctorDto(newEntity);
-            }
-            catch (Exception ex)
+        }
+
+        public DoctorDto UpdateDoctor(int id,DoctorUpdateRequest doctor)
+        {
+            var entity = _repository.GetById(id);
+            var Speciality = _speciality.GetById(doctor.SpecialityId);
+            if (Speciality == null)
             {
-                throw new Exception("An error occurred while creating the patient.", ex);
+                throw new ArgumentException("error");
             }
+
+            if (entity != null)
+            {
+                entity.Name = doctor.Name;
+                entity.LastName = doctor.LastName;
+                entity.PhoneNumber = doctor.PhoneNumber;
+                entity.DateOfBirth = doctor.DateOfBirth;
+                entity.SpecialityId = doctor.SpecialityId;
+
+               
+                var newEntity = _repository.Update(entity);
+                return DoctorDto.CreateDoctorDto(newEntity);
+            }
+
+            throw new ArgumentException("All fields are required.");
         }
         public DoctorDto DeleteDoctor(int id) 
         {
-           var doctor = _repository.GetByIdIncludeAddress(id);
+           var doctor = _repository.GetById(id);
            var entity = _repository.Delete(doctor);
            return DoctorDto.CreateDoctorDto(entity);
             
         }
     }
+    
 }

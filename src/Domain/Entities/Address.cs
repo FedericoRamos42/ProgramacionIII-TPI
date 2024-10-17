@@ -17,6 +17,7 @@ namespace Domain.Entities
         public string Province {  get; set; } = string.Empty;
         public string City { get; set; } = string.Empty ;
         public string PostalCode { get; set; } = string.Empty;
-        public User? User { get; set; }
+        public Patient? Patient { get; set; }
+        public int PatientId { get; set; }
     }
 }

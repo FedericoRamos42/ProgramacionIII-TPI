@@ -1,3 +1,4 @@
+using Application.Interfaces;
 using Application.Services;
 using Domain.Interfaces;
 using Infrastructure.Data;
@@ -13,7 +14,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();    
 builder.Services.AddScoped<PatientService>();
+builder.Services.AddScoped<IDoctorService,DoctorService>();
+builder.Services.AddScoped<IAppoitmentService, AppoitmentService>();
+builder.Services.AddScoped<ISpecialityService, SpecialityService>();
+builder.Services.AddScoped<AppoitmentService>();
+builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<ISpecialityRepository, SpecialityRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<IAppoitmentRepository,AppoitmentRepository>();
+
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionStrings")));
 

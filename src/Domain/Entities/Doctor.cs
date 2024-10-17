@@ -13,14 +13,14 @@ namespace Domain.Entities
     public class Doctor : User
     {
         [Required]
-        public Speciality Speciality { get; set; }
         public int LicenseNumber { get; set; }
-        public bool IsAvailable { get; set; }
+        public Speciality Speciality { get; set; }
+        public int SpecialityId { get; set; }
         public ICollection<Appoitment> AssignedAppointment { get; set; } = new List<Appoitment>();
 
         public Doctor() 
         {
-            IsAvailable = true;
+            UserRole = UserRole.Doctor;
         } 
 
     }

@@ -15,7 +15,7 @@ namespace Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdAppointment { get; set; }
         public int DoctorId { get; set; }
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; } //Agregue el int nulleable para que me permita ussar el crear el turno sin un patiente.
         public Doctor? Doctor { get; set; }
         public Patient? Patient { get; set; }
         public DateTime Date {  get; set; }
@@ -23,10 +23,6 @@ namespace Domain.Entities
         public string Office {  get; set; } = string.Empty;
         public AppoitmentStatus Status { get; set; }
 
-        //public Appoitment(AppoitmentStatus)
-        //{
-        //    Date = fecha;
-        //}
-
+       
     }
 }

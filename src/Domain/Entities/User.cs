@@ -29,7 +29,12 @@ namespace Domain.Entities
         public string Password { get; set; } = string.Empty;
         [Required]
         public UserRole UserRole { get; set; }
-        public int AddressId { get; set; }
-        public Address Address { get; set; } = new Address();
+        public bool IsAvailable { get; set; }
+
+
+        public User() 
+        {
+            IsAvailable = true;
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Application.Models.Request
         public string LastName { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
+        public int SpecialityId { get; set; } 
 
     }
 }

@@ -9,8 +9,8 @@ namespace Application.Models.Request
 {
     public class AppoitmentCreateRequest
     {
-        public Doctor? Doctor { get; set; }
-        public Patient? Patient { get; set; }
+        public int DoctorId { get; set; }
+        public int PatientId { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
         public string Office { get; set; } = string.Empty;
