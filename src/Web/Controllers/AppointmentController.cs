@@ -22,16 +22,23 @@ namespace Web.Controllers
             return Ok(_appoitmentService.GetById(id));
         }
         [HttpPost("generate/{doctorId}")]
-        public IActionResult GenerateAppointments(int doctorId, [FromBody] DateRangeRequest dateRange) 
+        public IActionResult GenerateAppointments(int doctorId, [FromBody] DateRangeRequest dateRange)
         {
             _appoitmentService.GenerateAppointmentForDoctor(doctorId, dateRange);
             return Ok("Turnos generados con éxito.");
         }
 
         [HttpGet("/Doctors/{doctorId}")]
-        public IActionResult GetAllByDoctorId(int doctorId) 
+        public IActionResult GetAllByDoctorId(int doctorId)
         {
             return Ok(_appoitmentService.GetAllByDoctorId(doctorId));
+        }
+
+        [HttpGet("SearchByDoctorsAndDate/")]
+
+        public IActionResult GetByDoctorAndDate([FromQuery] int doctorId, [FromQuery] DateTime date) 
+        {
+            return Ok(_appoitmentService.GetByDoctorAndDate(doctorId,date));
         }
     }
 }

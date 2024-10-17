@@ -12,7 +12,8 @@ namespace Application.Interfaces
     {
         public void GenerateAppointmentForDoctor(int doctorId, DateRangeRequest Date);
         AppoitmentDto GetById(int id);
-        AppoitmentDto CreateAppoinment(AppoitmentCreateRequest appoitment);
+        //AppoitmentDto CreateAppoinment(AppoitmentCreateRequest appoitment);
         IEnumerable<AppoitmentDto> GetAllByDoctorId(int id);
+        IEnumerable<AppoitmentDto> GetByDoctorAndDate(int idDoctor, DateTime date);
     }
 }

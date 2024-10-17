@@ -8,6 +8,7 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -77,25 +78,32 @@ namespace Application.Services
             return AppoitmentDto.CreateDto(appoitment);
         }
 
-        public AppoitmentDto CreateAppoinment(AppoitmentCreateRequest appoitment)
-        {
-            var newAppoitment = new Appoitment()
-            {
-                //Doctor = appoitment.Doctor,
-                //Patient = appoitment.Patient,
-                Time = appoitment.Time,
-                Date = appoitment.Date,
-                Office = appoitment.Office,
-            };
+        //publicappoitmentdto createappoinment(appoitmentcreaterequest appoitment)
+        //{
+        //    var newappoitment = new appoitment()
+        //    {
+        //        //doctor = appoitment.doctor,
+        //        //patient = appoitment.patient,
+        //        time = appoitment.time,
+        //        date = appoitment.date,
+        //        office = appoitment.office,
+        //    };
 
-            var enitity = _appoitmentRepository.Create(newAppoitment);
-            return AppoitmentDto.CreateDto(enitity);
-        }
+        //    var enitity = _appoitmentrepository.create(newappoitment);
+        //    return appoitmentdto.createdto(enitity);
+        //}
 
         public IEnumerable<AppoitmentDto> GetAllByDoctorId(int id)
         {
              var listAppointments = _appoitmentRepository.GetAppoitmentByDoctorId(id);
             return AppoitmentDto.CreateList(listAppointments);
+        }
+
+        public IEnumerable<AppoitmentDto>GetByDoctorAndDate(int idDoctor, DateTime date)
+        {
+            var list = _appoitmentRepository.GetAvailableAppointmentsByDoctorAndDate(idDoctor, date);
+
+            return AppoitmentDto.CreateList(list);
         }
     }
 }

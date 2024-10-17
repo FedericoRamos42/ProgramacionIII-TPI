@@ -54,6 +54,27 @@
   },
   {
     "ContainingType": "Web.Controllers.AppointmentController",
+    "Method": "GetByDoctorAndDate",
+    "RelativePath": "api/Appointment/DoctorsAndDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.AppointmentController",
     "Method": "GenerateAppointments",
     "RelativePath": "api/Appointment/generate/{doctorId}",
     "HttpMethod": "POST",

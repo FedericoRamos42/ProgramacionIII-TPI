@@ -46,14 +46,14 @@ namespace Infrastructure.Data
             return appoitment;
 
         }
-        
 
-        public IEnumerable<Appoitment> GetAppoitmentByDate(DateTime date)
+
+        public IEnumerable<Appoitment> GetAvailableAppointmentsByDoctorAndDate(int doctorId, DateTime date) 
         {
-            var appoitments = _repository.Appoitments
-                                        .Where(a=>a.Date == date)
-                                        .ToList();
-            return appoitments;
+            return _repository.Appoitments.Where(d=>d.Date == date && d.DoctorId == doctorId)
+                                          .Include(d => d.Doctor)
+                                          .Include(d=>d.Patient)
+                                          .ToList();  
         }
     }
 }
